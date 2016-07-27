@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko" ng-app="sampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bower_components/angular/angular.min.js"/>
+    <script>
+        angular.module("sampleApp")
+                .controller("mainCtrl", function($scope, $http){
+                    $scope.goRequest = function(){
+                        var reqPromise = $http({
+
+                        });
+                    }
+                });
+    </script>
+</head>
+<body ng-controller="mainCtrl">
+    <input type="button" value="request!" ng-click="goRequest()"/>
+</body>
+</html>

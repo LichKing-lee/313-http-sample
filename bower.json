@@ -1,0 +1,20 @@
+{
+  "name": "313_http_sample",
+  "authors": [
+    "LeeChangYong <lcy9002@naver.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.5.8"
+  }
+}
