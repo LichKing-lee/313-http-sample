@@ -1,15 +1,41 @@
 <!DOCTYPE html>
-<html lang="ko" ng-app="sampleApp">
+<html ng-app="httpApp">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="bower_components/angular/angular.min.js"/>
+    <script src="bower_components/angular/angular.js"></script>
     <script>
-        angular.module("sampleApp")
+        angular.module("httpApp", [])
                 .controller("mainCtrl", function($scope, $http){
                     $scope.goRequest = function(){
                         var reqPromise = $http({
+                            url : "http://localhost:8090/spring/angular.spring",
+                            method : "post",
+                            params : {
+                                param1 : "hello",
+                                param2 : "world"
+                            },
+                            data : {
+                                data1 : "data1!",
+                                data2 : "data2!"
+                            },
+                            headers : {
+                                header1 : "header1"
+                            }
+                        });
 
+                        reqPromise.then(function(reponse){
+                            alert("success");
+                        },
+                        function(response){
+                            console.log(response);
+                        });
+
+                        reqPromise.error(function(data, status, headers, config){
+                            console.log(data);
+                            console.log(status);
+                            console.log(headers);
+                            console.log(config);
                         });
                     }
                 });
