@@ -6,7 +6,7 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script>
         $.ajax({
-            url : "http://napi.ticketlink.co.kr",
+            url : "http://napi.ticketlink.co.kr/bugs/products/attention",
             data : {
                 data1 : "data1",
                 data2 : "data2"
@@ -14,7 +14,7 @@
             method : "get",
             dataType : "json",
             success : function(data){
-
+                console.log(data);
             },
             error : function(){
 
